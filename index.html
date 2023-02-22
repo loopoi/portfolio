@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JJUMS's Protfolio</title>
+    <meta name="description" content="Porfolio for world-renowned software engineer JJUMS">
+    <meta name="author" content="JJUMS">
+    <!--logo-->
+    <script src="https://kit.fontawesome.com/67551c372d.js" crossorigin="anonymous"></script>
+    <!--font-->
+    <!--css에 추가해서 사용하면 됨. font-family: 'Open Sans', sans-serif;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imgs/favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!--Navar-->
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <i class="fa-solid fa-star"></i>
+            <a href="#">JJUMS</a>
+        </div>
+
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item active" data-link="#home">Home</li>
+            <li class="navbar__menu__item" data-link="#about">About</li>
+            <li class="navbar__menu__item" data-link="#skills">Skills</li>
+            <li class="navbar__menu__item" data-link="#work">My work</li>
+            <li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>
+            <li class="navbar__menu__item" data-link="#contact">Contact</li>
+        </ul>
+
+    <!--Toggle button-->
+        <button class="navbar__toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <!--home-->
+    <section class="home" id="home">
+        <div class="home__container">
+            <img src="imgs/me.jpeg" alt="JJUMS's profile photo" class="home__avatar">
+            <h1 class="home__title">Hello, <br/>I'm Ironman.</h1>
+            <h2 class="home__desc">Bring me thanos!!!!</h2>
+            <button class="home__contact" data-link="#contact">Contact Me</button>
+        </div>
+
+    </section>
+    <!--About-->
+    <section id="about" class="section section__container">
+        <h1>About me</h1>
+        <p>I'm the Korean top class Hiphop 모범 noblesse Fabulous turbulence Gorgeous but dangerous 난 비트를 비틀어 제껴 버리는 서브미션 챔피언 똑바로 눈 떠라 떠나면 잡지 못할 버스 불을 지폈어 Scene의 흐름에 부름에 답해 Put it back 킬리만자로의 표범 거만해 계속 해 말해 나만의 기술 계속 개발해냈어 그놈의 Groove에 미친 혀란 붓으로 그림을 그려내 기술을 부리네 모두가 끄덕거리네 기특한 내 혓바닥은 No doubt</p>
+        <div class="about__majors">
+            <div class="major">
+            <div class="major__icon">
+                <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="major__title">Front-end</div>
+            <div class="major__desc">
+                HTML, CSS, JavaScript, TypeScript
+                <br/>React, Vue, Web APIs
+            </div>
+            </div>
+            <div class="major">
+            <div class="major__icon">
+                <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="major__title">Back-end</div>
+            <div class="major__desc">
+                Python, Django, Flask, Bottle
+                <br/>Gunicorn, Nginx, Supervisor
+            </div>
+            </div>
+            <div class="major">
+            <div class="major__icon">
+                <i class="fa-brands fa-aws"></i>
+            </div>
+            <div class="major__title">Cloud Platform</div>
+            <div class="major__desc">
+                AWS, NCP
+            </div>
+            </div>
+        </div>
+<!--        <div class="about__jobs">-->
+<!--            <div class="job">-->
+<!--                <img src="imgs/jobs/ncrew.png" alt="ncrewentertainment" class="job__logo">-->
+<!--                <div class="job__desc">-->
+<!--                    <p class="job__name">Ncrew Team DM back-end server programmer</p>-->
+<!--                    <p class="job__period">2 years</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="job">-->
+<!--                <img src="imgs/jobs/bm.jpeg" alt="netmarble" class="job__logo">-->
+<!--                <div class="job__desc">-->
+<!--                    <p class="job__name">BigmanGames Team Majestar back-end server programmer</p>-->
+<!--                    <p class="job__period">1 years</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="job">-->
+<!--                <img src="imgs/jobs/job_icon2.png" alt="netmarble" class="job__logo">-->
+<!--                <div class="job__desc">-->
+<!--                    <p class="job__name">Netmarble Team 1111 back-end server programmer</p>-->
+<!--                    <p class="job__period">1 years</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="job">-->
+<!--                <img src="imgs/jobs/job_icon.png" alt="loadcomplete" class="job__logo">-->
+<!--                <div class="job__desc">-->
+<!--                    <p class="job__name">Loadcomplete Team CQ back-end server programmer</p>-->
+<!--                    <p class="job__period">5 years</p>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </div>-->
+    </section>
+    <!--Skills-->
+    <section id="skills" class="section">
+        <div class="section__container">
+            <h1>Skills</h1>
+            <h2>Skills & Attributes</h2>
+            <p>이것저것 해봤다. 팀프, 개인프 원활하게 해왔고 약속 잘지키고 사적인 일이있어도 일에 지장따윈 없지.</p>
+            <div class="skillset">
+                <div class="skillset__left">
+                    <h3 class="skillset__title">Skills</h3>
+                    <div class="skill">
+                        <div class="skill__desc">
+                            <span>HTML</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__desc">
+                            <span>CSS</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__desc">
+                            <span>PYTHON</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__desc">
+                            <span>JAVASCRIPT</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__desc">
+                            <span>TYPESCRIPT</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__desc">
+                            <span>REACT</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skillset__right">
+                    <div class="tools">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="tools__list">
+                            <li><span>Pycharm</span></li>
+                            <li><span>IntelliJ</span></li>
+                            <li><span>Mysql Workbennavbarch</span></li>
+                            <li><span>Medis</span></li>
+                            <li><span>Postman</span></li>
+                        </ul>
+                    </div>
+                    <div class="etc">
+                        <h3 class="skillset__title">Etc</h3>
+                        <ul class="etc__list">
+                            <li><span>Git</span></li>
+                            <li><span>Notion</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!--Work-->
+    <section id="work" class="section">
+        <div class="section__container">
+            <h1>My work</h1>
+            <h3>Projects</h3>
+            <div class="work__categories">
+                <button class="category__btn selected" data-filter="*">All <span class="category__count">4</span></button>
+                <button class="category__btn" data-filter="front-end">Front-end <span class="category__count">0</span></button>
+                <button class="category__btn" data-filter="back-end">Back-end <span class="category__count">4</span></button>
+<!--                <button class="category__btn" data-filter="mobile">Mobile <span class="category__count">4</span></button>-->
+            </div>
+            <div class="work__projects">
+                <a href="https://www.youtube.com/watch?v=JfIVK_0b7Bg" class="project" target="blank" data-type="back-end">
+                    <img src="imgs/projects/cq.jpeg" alt="Crusaders Quest" class="project__img">
+                    <div class="project__desc">
+                        <h3>Crusaders Quest Youtube</h3>
+                        <span>back-end server</span>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/shorts/0bdLBGKZpwc" class="project" target="blank" data-type="back-end">
+                    <img src="imgs/projects/dm.jpeg" alt="Devil Maker" class="project__img">
+                    <div class="project__desc">
+                        <h3>Devil Maker Youtube</h3>
+                        <span>back-end server</span>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/watch?v=XM7AJr7LTYY" class="project" target="blank" data-type="back-end">
+                    <img src="imgs/projects/bm.jpeg" alt="Majestar Casino" class="project__img">
+                    <div class="project__desc">
+                        <h3>Majestar Casino Youtube</h3>
+                        <span>back-end server</span>
+                    </div>
+                </a>
+                <a href="https://game.naver.com/lounge/Overman/home" class="project" target="blank" data-type="back-end">
+                    <img src="imgs/projects/overman.jpeg" alt="초인의 시대" class="project__img">
+                    <div class="project__desc">
+                        <h3>초인의 시대 게임 라운지</h3>
+                        <span>back-end server</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <!--Testimonials-->
+    <section id="testimonials" class="section">
+        <div class="section__container">
+            <h1>Testimonials</h1>
+            <h3>See what they say about me</h3>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="imgs/testimonial/musk.png" alt="Musk" class="testimonial__avatar">
+                    <div class="testimonial__speech-bubble">
+                        <p>훌륭한 인재다. 그가 출근할때면 기저귀를 챙겨야했다. 그렇지 않으면 항상 축축한 바지 입어야만 했기에...</p>
+                        <p class="name"><a href="">Elon Musk</a> / Tesla</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial__speech-bubble">
+                        <p>그가 없었다면 spaceX 도 없었을 것이다. 우리는 그로 인해 화성에 한걸음 더 다가갈수 있게 되었고
+                            <br/>인류의 진화에 기여 할 수 있었다.</p>
+                        <p class="name"><a href="">Elon Musk</a> / Tesla</p>
+                    </div>
+                    <img src="imgs/testimonial/musk.png" alt="Musk" class="testimonial__avatar">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Contact-->
+    <section id="contact" class="section">
+        <h1 class="conntact__title">Let's talk</h1>
+        <h2 class="contact__email">loopoi1021@gmail.com</h2>
+        <div class="contact__links">
+            <a href="https://www.google.com/" target="_blank">
+                <i class="fa-brands fa-google"></i>
+            </a>
+            <a href="https://www.tesla.com/ko_kr" target="_blank">
+                <i class="fa-solid fa-charging-station"></i>
+            </a>
+            <p class="contact__righis">
+                2023 JJUMS - All rights reserved
+            </p>
+        </div>
+    </section>
+
+    <!--Arrow up-->
+    <button class="arrow__up">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</body>
+</html>

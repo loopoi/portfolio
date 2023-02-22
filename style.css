@@ -1,0 +1,608 @@
+/* Global */
+
+:root {
+    /* Color */
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #616161;
+    --color-light-grey: #7c7979;
+    --color-blue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-dark-orange: #cc9136;
+    --color-black: #000000;
+
+    /* Font size */
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+
+    /* Font weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+
+    /*Size*/
+    --size-border-radius: 4px;
+
+    /*Animation*/
+    --animation_duration: 300ms;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    /*커서가 텍스트에 갔을때 바로 바뀌는거 제거 기본적으로 마우스 포인트가 나타나도록 설정*/
+    cursor: default;
+}
+a {
+    text-decoration: none;/*밑줄 제거*/
+    color: var(--color-white)
+}
+ul {
+    list-style: none; /*쩜 제거*/
+    padding-left: 0;
+}
+
+/* Typography */
+
+h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 16px 0;
+}
+
+h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-black);
+    margin: 8px 0;
+}
+
+h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 8px 0;
+}
+
+p {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 4px 0;
+}
+
+button{
+    background-color: transparent; /*투명*/
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/*Universal tags*/
+* {
+    box-sizing: border-box;
+}
+
+#navbar{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    /*background-color: #887b62;*/
+    align-items: center;
+    color: var(--color-white);
+    background-color: transparent;
+    padding: 5px;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    transition: all var(--animation_duration) ease-in-out;
+    z-index: 1;
+}
+
+#navbar.navbar--dark {
+    background-color: var(--color-orange);
+    padding: 8px;
+}
+
+.navbar__logo {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+}
+.navbar__menu {
+    display: flex;
+
+}
+.navbar__menu__item {
+    padding: 8px 12px;
+    margin: 0 4px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active{
+    border: 1px solid var(--color-white);
+}
+
+.navbar__menu__item:hover{
+    border: 1px solid var(--color-white);
+    background-color: var(--color-dark-orange);
+    border-radius: var(--size-border-radius);
+}
+
+.navbar__toggle-btn{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    color: var(--color-white);
+    display: none;
+}
+
+
+/*Home*/
+.home{
+    background: url('imgs/background.png') center/cover no-repeat;
+    padding: 40px;
+    padding-top: 120px;
+    text-align: center;
+}
+.home__avatar{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--color-white)
+}
+.home__title, .home__desc {
+    color: var(--color-white);
+}
+
+.home__contact {
+    font-size: var(--font-regular);
+    font-weight: var(--font-regular);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-white);
+    border-radius: 4px;
+    color: var(--color-white);
+}
+
+.home__contact:hover {
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+/*Section common*/
+.section {
+    padding: 50px;
+    /*justify-content: center;*/
+    text-align: center;
+    margin: auto; /*화면을 늘렸을때 오른쪽에 마진이 생기면서 가운데 정렬이 안될떄가 있다.*/
+}
+
+.section__container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*About*/
+.about__majors {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.major__icon {
+    width: 170px;
+    height: 170px;
+    font-size: 70px;
+    line-height: 170px; /*heigh에 맞춰서 센터정렬*/
+    border-radius: 50%;
+    border: 1px solid var(--color-blue);
+    color: var(--color-blue);
+    margin: auto;
+    margin-bottom: 16px;
+    transition: all var(--animation_duration) ease;
+}
+.major__icon i {
+    transition: all var(--animation_duration) ease;
+}
+.major__icon:hover i {
+    color: var(--color-pink);
+    transform: rotate(-30deg) scale(1.1);
+}
+
+.major__icon:hover{
+    border-color: var(--color-pink);
+}
+
+.major__title, .major__desc {
+    color: var(--color-dark-grey);
+}
+
+.major__desc {
+    font-size: var(--font-small);
+}
+
+.job{
+    display: flex;
+    align-items: center;
+}
+
+.job__desc {
+    margin: 0 16px;
+    text-align: left;
+}
+
+.job__name, .job__period {
+    color: var(--color-light-grey);
+}
+
+.job__name{
+    font-size: var(--font-small);
+}
+.job__period {
+    font-size: var(--font-micro);
+}
+.job__logo {
+    width: 50px;
+    height: 50px;
+}
+
+#skills {
+    background-color: var(--color-yellow);
+}
+.skillset__title {
+    color: var(--color-white)
+}
+.skillset {
+    display: flex;
+    background-color: var(--color-light-grey);
+    color: var(--color-light-white);
+    margin: 20px 0
+}
+.skillset__left {
+    flex-basis: 60%;
+    background-color: var(--color-dark-grey);
+    padding: 20px 40px;
+}
+.skillset__right {
+    flex-basis: 40%;
+}
+.tools {
+    background-color: var(--color-grey);
+}
+.skill__desc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill__bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+}
+.skill__value {
+    width: 70%;
+    height: 3px;
+    background-color: var(--color-orange);
+}
+
+.skill {
+    margin-bottom: 16px;
+}
+
+.tools, .etc {
+    padding: 20px
+}
+
+/*Work*/
+.work__categories {
+    margin: 40px;
+}
+
+.category__btn {
+    border: 1px solid var(--color-dark-white);
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-regular);
+    padding: 8px 30px;
+    position: relative;
+}
+
+.category__btn.selected, .category__btn:hover {
+    background-color: var(--color-pink);
+    color: var(--color-white)
+}
+
+.category__btn.selected .category__count,
+.category__btn:hover .category__count {
+    opacity: 1;
+    top: 4px;
+}
+
+.category__count {
+    background-color: var(--color-orange);
+    border: 1px solid var(--color-orange);
+    border-radius: 50%;
+    color: var(--color-white);
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    display: inline-block;
+    position: absolute; /* releative: 자기 자신의 원래 위치를 기준으로 배치*/
+    top: -20px;
+    right: 4px;
+    opacity: 0;
+    transition: all var(--animation_duration) ease;
+}
+
+.work__projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 1;
+    transition: all var(--animation_duration) ease-out;
+}
+.work__projects.anim-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
+}
+
+
+.project {
+    position: relative; /*project__desc의 position을 받기위해*/
+    width: 280px;
+    height: 250px;
+    margin: 2px;
+    background-color: var(--color-light-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.project__desc {
+    position: absolute; /*static이 아닌 부모를 기준으로 위치가 정해진다.*/
+    background-color: black;
+    display: flex;
+    /*
+    flex-direction: flex 정렬
+    row: x축 기본
+    row-reverse: x축 역순
+    column: y축 기본
+    column-reverse: y축 역순
+    */
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--animation_duration) ease;
+}
+.project:hover .project__desc{
+    opacity: 0.8;
+    transform: translateY(0px);
+}
+
+
+.project__desc h3 {
+    color: var(--color-orange);
+}
+
+.project__desc h3:after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: var(--color-dark-white);
+    display: block;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+}
+
+/*Testimonials*/
+#testimonials{
+    background-color: var(--color-light-white);
+}
+
+.testimonials {
+    margin: 40px;
+}
+
+.testimonial {
+    display: flex;
+    margin: 32px 0;
+}
+.testimonial__avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+/*https://hohoya33.tistory.com/99 nth-child 설명*/
+.testimonial__avatar:nth-child(odd){
+    margin-right: 40px;
+}
+.testimonial__avatar:nth-child(even){
+    margin-left: 40px;
+}
+
+.testimonial__speech-bubble {
+    padding: 18px;
+    background-color: var(--color-white);
+    border-radius: var(--size-border-radius);
+}
+
+.testimonial__speech-bubble p {
+    color: var(--color-light-grey)
+}
+.testimonial__speech-bubble a {
+    color: var(--color-pink)
+}
+
+#contact {
+    background-color: var(--color-orange);
+}
+
+
+.conntact__title, .contact__email {
+    color: var(--color-white)
+}
+
+.contact__righis {
+    color: var(--color-white);
+}
+
+.conntact__title{
+    margin: 32px 0;
+}
+
+.contact__links {
+    font-size: var(--font-large);
+    margin: 24px 0;
+}
+
+.contact__links i {
+    transition: all var(--animation_duration) ease;
+}
+
+.contact__links i:hover{
+    transform: scale(1.5);
+    color: var(--color-yellow);
+}
+
+.arrow__up {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 40px;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    transition: all 300ms ease-in;
+    pointer-events: none;
+    /*text-align: right;*/
+    /*margin: auto;*/
+    /*line-height: 17px;*/
+    /*border: 1px solid var(--color-pink);*/
+
+}
+.arrow__up.visible{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.project.invisible {
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    :root {
+        /* Font size */
+        --font-large: 30px;
+        --font-medium: 18px;
+        --font-regular: 16px;
+        --font-small: 14px;
+        --font-micro: 12px;
+    }
+
+    .home__avatar{
+        width: 200px;
+        height: 200px;
+    }
+
+    .navbar__toggle-btn{
+        display: block;
+        top: 16px;
+        right: 16px;
+        font-size: var(--font-medium);
+    }
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--color-orange);
+        /*justify-content: center;*/
+    }
+
+    .navbar__menu {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+        background-color: var(--color-orange);
+    }
+
+    .navbar__menu.open {
+        display: block;
+    }
+
+    .about__majors{
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    .testimonial{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial__speech-bubble{
+        order: 1;
+    }
+
+    .testimonial__avatar:nth-child(even),
+    .testimonial__avatar:nth-child(odd){
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    .testimonial__avatar{
+        margin: 20px;
+    }
+
+    .skillset {
+        flex-direction: column;
+    }
+
+    .project{
+        flex-grow: 1;   /*알아서 화면을 매꿔준다.*/
+    }
+
+    .testimonial__avatar{
+        width: 80px;
+        height: 80px;
+    }
+    .section {
+        padding: 16px;
+    }
+    .category__btn {
+        padding: 8px 30px;
+        margin: 4px 0;
+    }
+
+    .arrow__up{
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
